@@ -17,6 +17,7 @@ export class ThemeModeService {
       document.body.classList.toggle('dark-mode', false);
     }
     else{
+      window.matchMedia('(prefers-color-scheme: dark)').matches ? localStorage.setItem('userPreferredScheme', 'dark') : localStorage.setItem('userPreferredScheme', 'light');
       document.body.classList.toggle('dark-mode', window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
   }

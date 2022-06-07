@@ -1,0 +1,8 @@
+<a class="logo-container" routerLink="/">
+  <img class="logo" src="../../../assets/logo.svg" alt="Logo">
+</a>
+<input class="scheme-toggle" type="checkbox" id="scheme-toggle" [checked]="userPreferredDark" (change)="setUserPreferredScheme($event)" hidden>
+<label for="scheme-toggle"></label>
+<div class="profile-container">
+  <img class="profile-picture" src="../../../assets/image-avatar.jpg" alt="Profile Picture">
+</div>

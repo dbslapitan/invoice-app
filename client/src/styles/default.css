@@ -6,19 +6,28 @@
   padding: 0;
 }
 
-.theme{
+/*button, input, select, textarea {
+  appearance: none;
+  font-family : inherit;
+}*/
+
+body{
   --bkg-color: #F8F8FB;
+  --color: #0C0E16;
+  --header-bkg: #373B53;
 }
 
-.theme.dark-mode{
+body.dark-mode{
   --bkg-color: #141625;
+  --color: #FFFFFF;
+  --header-bkg: #1E2139;
 }
 
-.theme{
-  font-family: 'League Spartan', sans-serif;
+body{
   background-color: var(--bkg-color);
+  font-family: 'League Spartan', sans-serif;
 }
 
-.dark-mode{
-  background-color: #141625;
+body *{
+  color: var(--color);
 }

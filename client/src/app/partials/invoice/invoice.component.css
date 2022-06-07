@@ -1,0 +1,39 @@
+:host{
+  align-content: space-between;
+  background-color: var(--home-invoice-bkg);
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 10px -10px #48549f1a;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 8.375rem;
+  padding: 1.5rem;
+}
+
+.hash{
+  color: #7E88C3;
+}
+
+.invoice-date{
+  color: var(--invoice-date);
+}
+
+.invoice-id{
+  flex: 1 1 2.4375rem;
+}
+
+.invoice-name{
+  color: var(--invoice-name);
+  flex: 1 1 1.9375rem;
+  text-align: end;
+}
+
+.invoice-status{
+  color: inherit;
+}
+
+.status-container{
+  height: 2.5rem;
+  width: 6.5rem;
+}

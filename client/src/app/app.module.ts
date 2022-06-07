@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './partials/header/header.component';
 import { HomeFilterComponent } from './partials/home-filter/home-filter.component';
 import { ToggleUnlessDirective } from './shared/directives/toggle-unless.directive';
+import { InvoiceComponent } from './partials/invoice/invoice.component';
+import { NoInvoiceComponent } from './partials/no-invoice/no-invoice.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ToggleUnlessDirective } from './shared/directives/toggle-unless.directi
     HomeComponent,
     HeaderComponent,
     HomeFilterComponent,
-    ToggleUnlessDirective
+    ToggleUnlessDirective,
+    InvoiceComponent,
+    NoInvoiceComponent
   ],
   imports: [
     BrowserModule,

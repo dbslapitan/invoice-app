@@ -12,4 +12,7 @@ export class HomeFilterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  preventImmediatePropagation(event: Event){
+    event.stopImmediatePropagation();
+  }
 }

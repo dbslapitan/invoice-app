@@ -2,9 +2,23 @@
   <h1 class="font-20-22 bold">Invoices</h1>
   <p class="font-12-15 medium invoices-count">7 invoices</p>
 </div>
-<div class="filter-container">
-  <input type="checkbox" id="filter-toggle" hidden>
-  <label class="font-12-15 bold" for="filter-toggle">Filter</label>
+<div class="dropdown-container">
+  <input type="checkbox" id="filter-toggle" hidden [toggleUnless]="[dropdown]">
+  <label class="font-12-15 bold" for="filter-toggle" (click)="preventImmediatePropagation($event)">Filter</label>
+  <ul class="dropdown-list" #dropdown>
+    <li>
+      <input type="checkbox" id="filter-draft">
+      <label class="font-12-15 bold" for="filter-draft">Draft</label>
+    </li>
+    <li>
+      <input type="checkbox" id="filter-pending">
+      <label class="font-12-15 bold" for="filter-pending">Pending</label>
+    </li>
+    <li>
+      <input type="checkbox" id="filter-paid">
+      <label class="font-12-15 bold" for="filter-paid">Paid</label>
+    </li>
+  </ul>
 </div>
 <button class="create-btn purple" type="button">
   <div></div>

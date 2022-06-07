@@ -14,14 +14,20 @@ button, input, select, textarea {
 
 body{
   --bkg-color: #F8F8FB;
+  --bkg-shadow: 0px 10px 20px #48549f40;
+  --checkbox-bkg: #DFE3FA;
   --color: #0C0E16;
+  --dropdown-bkg: #FFFFFF;
   --header-bkg: #373B53;
   --home-invoices: #888EB0;
 }
 
 body.dark-mode{
   --bkg-color: #141625;
+  --bkg-shadow: 0px 10px 20px #00000040;
   --color: #FFFFFF;
+  --checkbox-bkg: #1E2139;
+  --dropdown-bkg: #252945;
   --header-bkg: #1E2139;
   --home-invoices: #DFE3FA;
 }
@@ -61,6 +67,24 @@ body *{
 
 .create-btn > p{
   color: #FFFFFF;
+}
+
+.dropdown-container{
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-container > input[type="checkbox"]:not(:checked) ~ .dropdown-list{
+  display: none;
+}
+
+.dropdown-container > input[type="checkbox"]:checked ~ .dropdown-list{
+  display: flex;
+  position: absolute;
+}
+
+.dropdown-list{
+  list-style-type: none;
 }
 
 .font-32-36{

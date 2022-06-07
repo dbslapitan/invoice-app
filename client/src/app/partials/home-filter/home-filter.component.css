@@ -1,23 +1,22 @@
 :host{
+  box-sizing: border-box;
   display: flex;
   height: 2.75rem;
-  margin: 2rem 1.5rem;
-  width: 20.4375rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
-.filter-container{
-  align-items: center;
-}
-
-.filter-container > label{
+.dropdown-container > label{
   align-items: center;
   box-sizing: border-box;
   display: inline-flex;
   height: 100%;
+  user-select: none;
   padding: 1.125rem;
 }
 
-.filter-container > label::after{
+.dropdown-container > label::after{
   align-items: center;
   content: '';
   background-image: url('../../../assets/icon-arrow-down.svg');
@@ -28,8 +27,48 @@
   width: 0.625rem;
 }
 
-.filter-container > label:hover{
+.dropdown-container > label:hover{
   cursor: pointer;
+}
+
+.dropdown-list{
+  background-color: var(--dropdown-bkg);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: var(--bkg-shadow);
+  flex-direction: column;
+  gap: 1rem;
+  left: -1rem;
+  padding: 1.5rem;
+}
+
+.dropdown-list > li{
+  align-items: center;
+  display: inline-flex;
+}
+
+.dropdown-list > li :hover{
+  cursor: pointer;
+}
+
+.dropdown-list > li > input[type="checkbox"]{
+  background-color: var(--checkbox-bkg);
+  border-radius: 0.125rem;
+  height: 1rem;
+  margin-right: 0.8125rem;
+  width: 1rem;
+}
+
+.dropdown-list > li > input[type="checkbox"]:hover{
+  outline: 1px solid #7C5DFA;
+}
+
+.dropdown-list > li > input[type="checkbox"]:checked{
+  background-color: #7C5DFA;
+  background-image: url(../../../assets/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.625rem 0.5rem;
 }
 
 .invoices{

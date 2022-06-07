@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.theme{
+  --bkg-color: #F8F8FB;
+}
+
+.theme.dark-mode{
+  --bkg-color: #141625;
+}
+
+.theme{
+  font-family: 'League Spartan', sans-serif;
+  background-color: var(--bkg-color);
+}
+
+.dark-mode{
+  background-color: #141625;
+}

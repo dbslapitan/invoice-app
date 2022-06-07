@@ -13,6 +13,10 @@ export class HeaderComponent implements OnInit {
   constructor(private theme: ThemeModeService) { }
 
   ngOnInit(): void {
+    const userPreferredScheme = localStorage.getItem('userPreferredScheme');
+    if(userPreferredScheme){
+      this.userPreferredDark = userPreferredScheme.match('dark') ? true : false;
+    }
   }
 
   setUserPreferredScheme(event: Event){

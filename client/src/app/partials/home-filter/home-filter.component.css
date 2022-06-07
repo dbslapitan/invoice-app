@@ -1,0 +1,44 @@
+:host{
+  display: flex;
+  height: 2.75rem;
+  margin: 2rem 1.5rem;
+  width: 20.4375rem;
+}
+
+.filter-container{
+  align-items: center;
+}
+
+.filter-container > label{
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 100%;
+  padding: 1.125rem;
+}
+
+.filter-container > label::after{
+  align-items: center;
+  content: '';
+  background-image: url('../../../assets/icon-arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin-left: 0.75rem;
+  width: 0.625rem;
+}
+
+.filter-container > label:hover{
+  cursor: pointer;
+}
+
+.invoices{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+}
+
+.invoices-count{
+  color: var(--home-invoices);
+}

@@ -1,0 +1,33 @@
+:host{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 6.375rem 0;
+  width: 100%;
+}
+
+:host > h2{
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+:host > p{
+  color: var(--home-invoices);
+  text-align: center;
+  width: 12.0669rem;
+}
+
+:host > p > span{
+  color: var(--home-invoices);
+}
+
+.no-invoices-bkg{
+  background-image: url('../../../assets/illustration-empty.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 10rem;
+  margin: auto;
+  width: 12.0669rem;
+}

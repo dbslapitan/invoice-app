@@ -47,6 +47,14 @@ body *{
   color: var(--color);
 }
 
+button:hover{
+  cursor: pointer;
+}
+
+label{
+  user-select: none;
+}
+
 .bold{
   font-weight: 700;
 }

@@ -1,0 +1,38 @@
+:host{
+  display: block;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+fieldset{
+  padding: 1.5rem 0;
+}
+
+label{
+  color: var(--new-invoice-label);
+}
+
+label + input[type="text"]{
+  border-radius: 0.25rem;
+  height: 3rem;
+}
+
+.back-link{
+  display: inline-flex;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.invoice-form{
+  padding: 1.5rem;
+}
+
+.page-title{
+  padding-left: 1.5rem;
+  width: 100%;
+}
+
+#street{
+  width: 100%;
+  margin-top: 0.625rem;
+}

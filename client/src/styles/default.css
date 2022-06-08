@@ -18,11 +18,14 @@ body{
   --checkbox-bkg: #DFE3FA;
   --color: #0C0E16;
   --dropdown-bkg: #FFFFFF;
+  --focus-outline: 1px solid #9277FF;
   --header-bkg: #373B53;
   --home-invoice-bkg: #FFFFFF;
   --home-invoices: #888EB0;
+  --input-outline: 1px solid #DFE3FA;
   --invoice-date: #7E88C3;
   --invoice-name: #858BB2;
+  --new-invoice-label: #7E88C3;
 }
 
 body.dark-mode{
@@ -31,11 +34,14 @@ body.dark-mode{
   --color: #FFFFFF;
   --checkbox-bkg: #1E2139;
   --dropdown-bkg: #252945;
+  --focus-outline: none;
   --header-bkg: #1E2139;
   --home-invoice-bkg: #1E2139;
   --home-invoices: #DFE3FA;
+  --input-outline: 1px solid #252945;
   --invoice-date: #DFE3FA;
   --invoice-name: #FFFFFF;
+  --new-invoice-label: #888EB0;
 }
 
 body{
@@ -51,8 +57,36 @@ button:hover{
   cursor: pointer;
 }
 
+input{
+  background-color: var(--home-invoice-bkg);
+  box-sizing: border-box;
+  font-weight: 700;
+  outline: var(--input-outline);
+  padding: 1.125rem 1rem;
+}
+
+input:focus{
+  caret-color: #7C5DFA;
+  outline: var(--focus-outline);
+}
+
 label{
   user-select: none;
+}
+
+legend{
+  color: #7C5DFA;
+}
+
+.back-link::before{
+  content: '';
+  display: inline-flex;
+  background-image: url('../assets/icon-arrow-left.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.625rem;
+  margin-right: 1.5rem;
+  width: 0.4375rem;
 }
 
 .bold{

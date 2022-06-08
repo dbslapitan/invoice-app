@@ -9,6 +9,7 @@ import { HomeFilterComponent } from './partials/home-filter/home-filter.componen
 import { ToggleUnlessDirective } from './shared/directives/toggle-unless.directive';
 import { InvoiceComponent } from './partials/invoice/invoice.component';
 import { NoInvoiceComponent } from './partials/no-invoice/no-invoice.component';
+import { NewInvoiceDialogComponent } from './partials/new-invoice-dialog/new-invoice-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NoInvoiceComponent } from './partials/no-invoice/no-invoice.component';
     HomeFilterComponent,
     ToggleUnlessDirective,
     InvoiceComponent,
-    NoInvoiceComponent
+    NoInvoiceComponent,
+    NewInvoiceDialogComponent
   ],
   imports: [
     BrowserModule,

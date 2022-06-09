@@ -25,7 +25,9 @@ body{
   --input-outline: 1px solid #DFE3FA;
   --invoice-date: #7E88C3;
   --invoice-name: #858BB2;
+  --new-invoice-bkg: #FFFFFF;
   --new-invoice-label: #7E88C3;
+  --new-item-btn: #F9FAFE;
 }
 
 body.dark-mode{
@@ -34,14 +36,16 @@ body.dark-mode{
   --color: #FFFFFF;
   --checkbox-bkg: #1E2139;
   --dropdown-bkg: #252945;
-  --focus-outline: none;
+  --focus-outline: 1px solid #252945;
   --header-bkg: #1E2139;
   --home-invoice-bkg: #1E2139;
   --home-invoices: #DFE3FA;
   --input-outline: 1px solid #252945;
   --invoice-date: #DFE3FA;
   --invoice-name: #FFFFFF;
+  --new-invoice-bkg: #141625;
   --new-invoice-label: #888EB0;
+  --new-item-btn: #252945;
 }
 
 body{
@@ -59,10 +63,17 @@ button:hover{
 
 input{
   background-color: var(--home-invoice-bkg);
+  border-radius: 0.25rem;
   box-sizing: border-box;
   font-weight: 700;
   outline: var(--input-outline);
   padding: 1.125rem 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 input:focus{

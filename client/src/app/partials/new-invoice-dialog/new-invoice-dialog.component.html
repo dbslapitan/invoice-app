@@ -1,9 +1,115 @@
 <a class="back-link font-12-15 bold">Go Back</a>
 <h2 class="page-title font-24-32 bold">New Invoice</h2>
 <form class="invoice-form">
-  <fieldset>
-    <legend class="font-12-15 bold">Bill From</legend>
-    <label class="font-12-15 medium" for="street">Street Address</label>
-    <input type="text" name="street" id="street">
+  <fieldset class="bill-from">
+    <legend>Bill From</legend>
+    <div class="input-container">
+      <label for="street">Street Address</label>
+      <input type="text" name="street" id="street" required>
+    </div>
+    <div class="input-container city">
+      <label for="city">City</label>
+      <input type="text" name="city" id="city" required>
+    </div>
+    <div class="input-container postal">
+      <label for="postal">Post Code</label>
+      <input type="text" name="postal" id="postal" required>
+    </div>
+    <div class="input-container">
+      <label for="country">Country</label>
+      <input type="text" name="country" id="country" required>
+    </div>
   </fieldset>
+  <fieldset class="bill-to">
+    <legend>Bill To</legend>
+    <div class="input-container">
+      <label for="clientName">Client's Name</label>
+      <input type="text" name="clientName" id="clientName" required>
+    </div>
+    <div class="input-container">
+      <label for="clientEmail">Client's Email</label>
+      <input type="text" name="clientEmail" id="clientEmail" required>
+    </div>
+    <div class="input-container">
+      <label for="clientAddress">Street Address</label>
+      <input type="text" name="clientAddress" id="clientAddress" required>
+    </div>
+    <div class="input-container city">
+      <label for="clientCity">City</label>
+      <input type="text" name="clientCity" id="clientCity" required>
+    </div>
+    <div class="input-container postal">
+      <label for="clientPostal">Post Code</label>
+      <input type="text" name="clientPostal" id="clientPostal" required>
+    </div>
+    <div class="input-container">
+      <label for="clientCountry">Country</label>
+      <input type="text" name="clientCountry" id="clientCountry" required>
+    </div>
+  </fieldset>
+  <fieldset class="invoice">
+    <div class="input-container">
+      <label for="invoiceDate">Invoice Date</label>
+      <input type="date" name="invoiceDate" id="invoiceDate">
+    </div>
+    <div class="input-container">
+      <label for="paymentTerms">Payment Terms</label>
+      <input type="number" name="paymentTerms" id="paymentTerms" hidden>
+      <div class="dropdown-container">
+        <input type="checkbox" id="paymentToggle" hidden>
+        <label class="net-input" for="paymentToggle">Net 1 Day</label>
+        <ul class="dropdown-list">
+          <li>
+            <input type="radio" name="net" id="net1" hidden checked>
+            <label for="net1">Net 1 Day</label>
+          </li>
+          <li>
+            <input type="radio" name="net" id="net7" hidden>
+            <label for="net7">Net 7 Day</label>
+          </li>
+          <li>
+            <input type="radio" name="net" id="net14" hidden>
+            <label for="net14">Net 14 Day</label>
+          </li>
+          <li>
+            <input type="radio" name="net" id="net30" hidden>
+            <label for="net30">Net 30 Day</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="projectDescription">Project Description</label>
+      <input type="text" name="projectDescription" id="projectDescription">
+    </div>
+  </fieldset>
+  <fieldset class="item-list">
+    <legend class="title">Item List</legend>
+    <div class="item-loop">
+      <div class="input-container">
+        <label for="itemName">Item Name</label>
+        <input type="text" name="itemName" id="itemName">
+      </div>
+      <div class="input-container qty">
+        <label for="qty">Qty.</label>
+        <input type="number" name="qty" id="qty">
+      </div>
+      <div class="input-container price">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" step="0.01">
+      </div>
+      <div class="input-container total">
+        <span class="total-label">Total</span>
+        <span class="amount">156.00</span>
+      </div>
+      <button class="delete" type="button"><svg class="delete-btn"></svg></button>
+    </div>
+    <button class="new-invoice-btn" type="button"><svg class="plus"></svg>&nbsp;Add New Item</button>
+  </fieldset>
+  <div class="shadow"></div>
+  <div class="actions-container">
+    <button class="discard" type="button">Discard</button>
+    <button class="draft" type="button">Save as Draft</button>
+    <button class="send" type="submit">Save & Send</button>
+  </div>
 </form>
